@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/home/samuelguzman/Proyectos/eclipse/lab3.2Patterns/src</OriginalElement>
+  <nodes>
+    <node x="0.0" y="524.0">observer.Main</node>
+    <node x="582.6666666666667" y="367.0">observer.SemaphorGUI</node>
+    <node x="619.609375" y="136.0">domain.Covid19Patient</node>
+    <node x="6.6666666666667" y="367.0">observer.PatientThermometerGUI</node>
+    <node x="22.666666666666686" y="448.0">observer.PatientThermometerGUI.TemperatureCanvas</node>
+    <node x="326.4166666666667" y="150.5">domain.Medicament</node>
+    <node x="-77.0" y="-87.0">adapter.InvertedIterator</node>
+    <node x="425.109375" y="10.0">domain.Symptom</node>
+    <node x="293.5334821428573" y="360.0">observer.PatientObserverGUI</node>
+    <node x="204.53348214285728" y="291.0">factory.Main</node>
+    <node x="127.60937500000006" y="188.0">factory.MedicalGUI</node>
+    <node x="824.859375" y="283.0">observer.PatientSymptomGUI</node>
+    <node x="527.6666666666667" y="283.0">factory.PatientSymptomGUI</node>
+    <node x="33.0" y="103.0">adapter.Sorting</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="observer.PatientThermometerGUI.TemperatureCanvas" target="observer.PatientThermometerGUI" relationship="INNER_CLASS">
+      <point x="66.66666666666669" y="-15.5" />
+      <point x="189.33333333333337" y="423.0" />
+      <point x="200.0" y="423.0" />
+      <point x="77.3333333333333" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="381.0" y="278.0" />
+  <SelectedNodes>
+    <node>observer.PatientObserverGUI</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
