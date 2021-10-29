@@ -5,6 +5,10 @@ public class Symptom {
     private int covidImpact;
     private int severityIndex;
 
+    public Symptom(){
+
+    }
+
     public Symptom(String name, int covidImpact, int severityIndex) {
         this.name = name;
         this.covidImpact = covidImpact;
@@ -33,6 +37,10 @@ public class Symptom {
 
     public void setSeverityIndex(int severityIndex) {
         this.severityIndex = severityIndex;
+    }
+
+    public Symptom createSymptom(){
+        return this;
     }
 
     @Override
