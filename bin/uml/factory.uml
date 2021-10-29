@@ -41,12 +41,12 @@
       <point x="50.5" y="250.0" />
       <point x="106.78391472868213" y="250.0" />
       <point x="106.78391472868213" y="240.0" />
-      <point x="37.33333333333334" y="240.0" />
-      <point x="37.33333333333334" y="82.0" />
+      <point x="37.333333333333314" y="240.0" />
+      <point x="37.333333333333314" y="82.0" />
       <point x="119.95833333333329" y="82.0" />
       <point x="119.95833333333329" y="62.0" />
       <point x="170.38468992248062" y="62.0" />
-      <point x="-40.66666666666666" y="15.5" />
+      <point x="-40.666666666666664" y="15.5" />
     </edge>
     <edge source="domain.Covid19Patient" target="domain.Symptom" relationship="CREATE">
       <point x="-40.75" y="-15.5" />
@@ -68,6 +68,14 @@
       <point x="183.66666666666666" y="250.0" />
       <point x="54.33333333333334" y="15.5" />
     </edge>
+    <edge source="domain.Medicament" target="domain.Symptom" relationship="TO_MANY">
+      <point x="36.25" y="-15.5" />
+      <point x="381.3013565891473" y="72.0" />
+      <point x="318.6841085271318" y="72.0" />
+      <point x="318.6841085271318" y="62.0" />
+      <point x="251.71802325581393" y="62.0" />
+      <point x="40.66666666666666" y="15.5" />
+    </edge>
     <edge source="factory.Main" target="domain.Medicament" relationship="CREATE">
       <point x="0.0" y="-15.5" />
       <point x="326.58333333333326" y="250.0" />
@@ -76,21 +84,13 @@
       <point x="393.3846899224806" y="166.0" />
       <point x="48.33333333333334" y="15.5" />
     </edge>
-    <edge source="domain.Medicament" target="domain.Symptom" relationship="TO_MANY">
-      <point x="36.25" y="-15.5" />
-      <point x="381.3013565891473" y="72.0" />
-      <point x="318.6841085271318" y="72.0" />
-      <point x="318.6841085271318" y="62.0" />
-      <point x="251.7180232558139" y="62.0" />
-      <point x="40.66666666666663" y="15.5" />
-    </edge>
     <edge source="domain.Covid19Patient" target="domain.Symptom" relationship="TO_MANY">
       <point x="40.75" y="-15.5" />
       <point x="170.08333333333331" y="72.0" />
       <point x="318.6841085271318" y="72.0" />
       <point x="318.6841085271318" y="62.0" />
-      <point x="251.7180232558139" y="62.0" />
-      <point x="40.66666666666663" y="15.5" />
+      <point x="251.71802325581393" y="62.0" />
+      <point x="40.66666666666666" y="15.5" />
     </edge>
     <edge source="factory.MedicalGUI" target="domain.Symptom" relationship="DEPENDENCY">
       <point x="-34.25" y="-15.5" />
@@ -102,7 +102,7 @@
       <point x="119.95833333333329" y="82.0" />
       <point x="119.95833333333329" y="62.0" />
       <point x="170.38468992248062" y="62.0" />
-      <point x="-40.66666666666666" y="15.5" />
+      <point x="-40.666666666666664" y="15.5" />
     </edge>
     <edge source="factory.PatientSymptomGUI" target="domain.Covid19Patient" relationship="TO_ONE">
       <point x="50.5" y="-15.5" />
@@ -117,7 +117,7 @@
       <point x="0.0" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="1.45" showDependencies="true" x="268.13793103448273" y="166.86206896551727" />
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="225.0" y="151.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
