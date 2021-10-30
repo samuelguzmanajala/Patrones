@@ -1,5 +1,7 @@
 package domain;
 
+import factory.GetSymptom;
+import factory.GetSymptomByName;
 import factory.SymptomFactory;
 
 import java.util.Arrays;
@@ -45,13 +47,8 @@ public class Covid19Patient {
     }
 
     public Symptom getSymptomByName(String symptomName) {
-        Iterator<Symptom> i = getSymptoms().iterator();
-        Symptom s = null;
-        while (i.hasNext()) {
-            s = i.next();
-            if (s != null && s.getName().equals(symptomName)) return s;
-        }
-        return null;
+        GetSymptom symptoms= new GetSymptomByName(getSymptoms());
+        return symptoms.getSymptom(symptomName);
     }
 
     public Symptom addSymptomByName(String symptom, Integer w) {
