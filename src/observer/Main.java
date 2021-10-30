@@ -1,15 +1,19 @@
 package observer;
 
+import java.util.Observable;
+
 public class Main {
 
     /**
      * Launch the application.
      */
     public static void main(String[] args) {
-//		Observable pacient=new Covid19Pacient("aitor", 35);
-//		new PacientObserverGUI (pacient);
-//		new PacientSymptomGUI (pacient);
-    }
+		Observable patient=new Covid19Patient("aitor", 35);
+        Observable patient2=new Covid19Patient("Javier", 25);
 
+        new PatientObserverGUI (patient);
+        new PatientThermometerGUI (patient);
+        new PatientSymptomGUI ((Covid19Patient) patient);
+    }
 
 }

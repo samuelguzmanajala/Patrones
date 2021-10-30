@@ -12,26 +12,43 @@ import domain.Symptom;
 
 import javax.swing.JLabel;
 
-public class PatientObserverGUI extends JFrame{
+public class PatientObserverGUI extends JFrame implements Observer {
 
-	private JPanel contentPane;
-	private final JLabel symptomLabel = new JLabel("");
+    private JPanel contentPane;
+    private final JLabel symptomLabel = new JLabel("");
 
-	/**
-	 * Create the frame.
-	 */
-	public PatientObserverGUI() {
-		setTitle("Pacient symptoms");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(650, 100, 200, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		symptomLabel.setBounds(19, 38, 389, 199);
-		contentPane.add(symptomLabel);
-		symptomLabel.setText("Still no symptoms");
-		this.setVisible(true);
-	}
+    /**
+     * Create the frame.
+     */
+    public PatientObserverGUI(Observable patient) {
+        setTitle("Pacient symptoms");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(650, 100, 200, 300);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        symptomLabel.setBounds(19, 38, 389, 199);
+        contentPane.add(symptomLabel);
+        symptomLabel.setText("Still no symptoms");
+        this.setVisible(true);
+        patient.addObserver(this);
+    }
 
+
+    @Override
+    public void update(Observable o, Object arg) {
+        Covid19Patient p = (Covid19Patient) o;
+        String s = "<html> Pacient: <b>" + p.getName() + "</b> <br>";
+        s = s + "Covid impact: <b>" + p.covidImpact() + "</b><br><br>";
+        s = s + " _____________________ <br> Symptoms: <br>";
+        Iterator<Symptom> i = p.getSymptoms().iterator();
+        Symptom p2;
+        while (i.hasNext()) {
+            p2 = i.next();
+            s = s + " - " + p2.toString() + ", " + p.getWeight(p2) + "<br>";
+        }
+        s = s + "</html>";
+        symptomLabel.setText(s);
+    }
 }
