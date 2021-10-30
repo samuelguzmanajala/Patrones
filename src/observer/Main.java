@@ -13,6 +13,7 @@ public class Main {
 
         new PatientObserverGUI (patient);
         new PatientThermometerGUI (patient);
+        new SemaphorGUI(patient);
         new PatientSymptomGUI ((Covid19Patient) patient);
     }
 
